@@ -1,4 +1,4 @@
-@authors Mantis Cacioppo, Aidan Denham, Simon Kowerski, Serene Siu
+@authors Mantis Cacioppo, Aidan Denham, Simon Kowerski, Serene Siu\n
 Created for the 2023 HackFree Hackathon
 https://devpost.com/software/rang-security-for-all
 
