@@ -1,4 +1,6 @@
 @authors Mantis Cacioppo, Aidan Denham, Simon Kowerski, Serene Siu
+Created for the 2023 HackFree Hackathon
+https://devpost.com/software/rang-security-for-all
 
 ##Inspiration##
 Rang aims to take something that is overpriced and exploited, and make it accessible to everyone. Here at Rang, our mission is to help make information available and accessible to everyone, while doing so at an affordable price. That being so, Ring Doorbells are known for selling your data on the internet, being easily hackable, and extremely overpriced. So we draw our inspirations from Ring Doorbells. With our app, you can have equivalent power for a fraction of the cost.
