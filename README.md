@@ -7,7 +7,7 @@ Rang Cameras are an affordable security feature that have built in motion detect
 <br><br>
 <h4> Challenges Faced </h4>
 <ul>
-  <li>AWS API for cloud storage</li>
+  <li>Utilizing Amazon Web Services API for cloud storage</li>
   <li>Connecting Multiple Cameras through Bluetooth</li>
   <li>Encrypting Information In Cloud</li>
 </ul>
