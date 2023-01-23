@@ -23,10 +23,10 @@ Rang Cameras are an affordable security feature that have built in motion detect
   </ol>
   </li>
   <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-how-to-use-'>How to Use</a></i></small></li>
- <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-connecting-addtional-cameras-'>Connecting Additional Cameras</a></i></small></li>
+ <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-connecting-additional-cameras-'>Connecting Additional Cameras</a></i></small></li>
  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-other-settings-'>Other Settings</a></i></small></li>
  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-how-to-contribute-'>How to Contribute</a></i></small></li>
- <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-license'>License</a></i></small></li>
+ <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-license-'>License</a></i></small></li>
  </ul>
  <h2> Image Gallery</h2>
  <h2> Downloads and Installation</h2>
