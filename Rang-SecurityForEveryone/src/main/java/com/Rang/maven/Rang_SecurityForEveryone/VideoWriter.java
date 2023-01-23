@@ -19,18 +19,19 @@ public class VideoWriter extends Thread
 {
 	private Webcam webcam;
 	public boolean isRunning = false;
+	public static File saveFile;
 	
 	public VideoWriter(Webcam cam)
 	{
 		webcam = cam;
 	}
 
-	void startVideoRecording() throws InterruptedException 
+	public void startVideoRecording() throws InterruptedException 
 	{
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH-mm-ss");
 		LocalDateTime now = LocalDateTime.now();
 		String path = "Captures\\" + dtf.format(now) + ".mp4";
-		File saveFile = new File(path);
+		saveFile = new File(path);
 		
 		//Initialize media writer
 		IMediaWriter writer = ToolFactory.makeWriter(saveFile.getAbsolutePath());
@@ -38,7 +39,7 @@ public class VideoWriter extends Thread
 		Dimension size = webcam.getViewSize();
 		writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
 		long start = System.currentTimeMillis();
-		for(int i = 0; i<300; i++) 
+		for(int i = 0; i<400; i++) 
 		{
 			System.out.println(i);
 			BufferedImage image = ConverterFactory.convertToType(webcam.getImage(), BufferedImage.TYPE_3BYTE_BGR);
@@ -54,6 +55,10 @@ public class VideoWriter extends Thread
 		System.out.println("Video recorded to the file: " + saveFile.getAbsolutePath());
 		//TextMessage.sendText(App.phoneNum, saveFile.getAbsolutePath());
 		isRunning = false;
+	}
+	public static String getFileName()
+	{
+		return saveFile.getAbsolutePath();
 	}
 
 	@Override
