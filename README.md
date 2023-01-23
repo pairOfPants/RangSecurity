@@ -15,18 +15,18 @@ Rang Cameras are an affordable security feature that have built in motion detect
 <h2 style="font-size:45px;"> Table of Contents </h2>
 <ul>
   <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-project-description-'>Product Description</a></i></small></li>
-  <li><small><i><a href=''>Image Gallery</a></i></small></li>
-  <li><small><i><a href=''>Downloads and Installation</a></i></small></li>
+  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-image-gallery'>Image Gallery</a></i></small></li>
+  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-downloads-and-installation'>Downloads and Installation</a></i></small></li>
  <ol padding-bottom: 0;">
-  <li style="margin-left:2em"><small><i><a href=''>Download</a></i></small></li>
-  <li style="margin-left:2em; padding-bottom: 0;"><small><i><a href=''>Install</a></i></small></li>
+  <li style="margin-left:2em"><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-downlad-'>Download</a></i></small></li>
+  <li style="margin-left:2em; padding-bottom: 0;"><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-install-'>Install</a></i></small></li>
   </ol>
   </li>
-  <li><small><i><a href=''>How to Use</a></i></small></li>
- <li><small><i><a href=''>Connecting Additional Cameras</a></i></small></li>
- <li><small><i><a href=''>Other Settings</a></i></small></li>
- <li><small><i><a href=''>How to Contribute</a></i></small></li>
- <li><small><i><a href=''>License</a></i></small></li>
+  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-how-to-use-'>How to Use</a></i></small></li>
+ <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-connecting-addtional-cameras-'>Connecting Additional Cameras</a></i></small></li>
+ <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-other-settings-'>Other Settings</a></i></small></li>
+ <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-how-to-contribute-'>How to Contribute</a></i></small></li>
+ <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-license'>License</a></i></small></li>
  </ul>
  <h2> Image Gallery</h2>
  <h2> Downloads and Installation</h2>
