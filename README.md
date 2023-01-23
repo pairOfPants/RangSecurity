@@ -1,4 +1,4 @@
-<h1 style="font-size:60px;"> Rang - Security for Everyone </h1>
+_<h1 style="font-size:60px;"> Rang - Security for Everyone </h1>
 <i>Note: This project is unfinished. It was originally created by four high school students at a local hackathon, and further development is now being implemented.</i> <br>
 Estimated Completion Date: <b>TBD</b>
 <h2 style="font-size:30px;"> Project Description </h2>
@@ -14,18 +14,26 @@ Rang Cameras are an affordable security feature that have built in motion detect
 </ul>
 <h2 style="font-size:45px;"> Table of Contents </h2>
 <ul>
-  <li> Project Description </li>
+  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/edit/main/README.md#-project-description-'>Product Description</a></i></small></li>
   <li> Image Gallery </li>
-  <li>Downloads and Installation
+  <li>Downloads and Installation </li>
  <ol padding-bottom: 0;">
   <li style="margin-left:2em">Download</li>
   <li style="margin-left:2em; padding-bottom: 0;">Install</li>
- </ol>
- </li>
- <li> How to Use </li>
+  </ol>
+  </li>
+  <li> How to Use </li>
  <li> Connecting Additional Cameras </li>
- <li> Other Settings </li>
+ <li> Other Settings </li
  <li> How to Contribute </li>
  <li> License </li>
  </ul>
-                                                 
+ <h2> Image Gallery</h2>
+ <h2> Downloads and Installation</h2>
+ <h4> Downlad </h4>
+ <h4> Install </h4>
+ <h2> How to Use </h2>
+ <h2> Connecting Additional Cameras </h2>                                                
+ <h2> Other Settings </h2>
+ <h2> How to Contribute </h2>
+ <h2> License </h2>
