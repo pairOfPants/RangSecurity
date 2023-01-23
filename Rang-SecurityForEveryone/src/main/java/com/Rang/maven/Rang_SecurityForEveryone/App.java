@@ -22,6 +22,7 @@ import com.github.sarxos.webcam.WebcamMotionDetector;
 import com.github.sarxos.webcam.WebcamMotionEvent;
 import com.github.sarxos.webcam.WebcamMotionListener;
 import com.github.sarxos.webcam.WebcamPanel;
+import com.twilio.rest.voice.v1.dialingpermissions.Settings;
 
 public class App extends JFrame implements ActionListener, WebcamMotionListener
 {
@@ -30,11 +31,38 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 	 */
 	private static final long serialVersionUID = 1L;
 
+	private Color background;
+	private Color fontColor;
+	private Color buttonColor;
+	JLabel imageHolder;
+	JLabel videoHolder;
+	static Webcam webcam;
+	static WebcamPanel webcamPanel;
+	private JPanel topStuffPanel;
+	private JButton startStop;
+	private VideoWriter writer;
+	private WebcamMotionDetector detector;
+	private JButton security;
+	public static String phoneNum;
+
+
+	private String toEmailAddress;
+	private final String fromEmailAddress = "destroyingbigcorporate@gmail.com";
+	final String emailUsername = "destroyingbigcorporate@gmail.com"; //will always be the from address
+	final String emailPassword = "jduslfsmegehdiee"; //app password needs to be changed when we make our final business email
+
+	private boolean startedVid = false;
+	private boolean startedSec = false;
+	private InfiniteVideoWriter previous;
+	private VideoWriter next;
+	
+	
+	private JButton chooseFilePath;
 
 
 	public static void main(String[] args)
 	{
-		new App();
+		App app = new App();
 
 		webcam.addWebcamListener(new WebcamListener() 
 		{
@@ -57,26 +85,10 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 
 			@Override
 			public void webcamImageObtained(WebcamEvent we) {
-				System.out.println("Image Taken");				
+				//System.out.println("Image Taken");				
 			}
 		});
 	}
-
-	private Color background;
-	private Color fontColor;
-	private Color buttonColor;
-	JLabel imageHolder;
-	JLabel videoHolder;
-	static Webcam webcam;
-	static WebcamPanel webcamPanel;
-	private JPanel topStuffPanel;
-	private JButton startStop;
-	private VideoWriter writer;
-	private WebcamMotionDetector detector;
-	private JButton security;
-	public static  String phoneNum;
-	
-	
 
 	public App()
 	{
@@ -87,12 +99,8 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 		webcam = Webcam.getDefault();
 		webcam.setViewSize(new Dimension(320,240));
 
-//		
-
 		imageHolder = new JLabel();		
 		videoHolder = new JLabel();
-		//videoHolder.setIcon(webcamPanel);
-
 
 		setTitle("Rang - Security for Everyone");
 		setSize(960, 720);
@@ -147,19 +155,27 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 		ImageIcon logo = new ImageIcon(new ImageIcon(image).getImage()
 				.getScaledInstance(getWidth() / 2, getHeight() / 2, Image.SCALE_DEFAULT));
 
-		
+
 		JLabel logo2 =new JLabel();
 		logo2.setIcon(logo);
 
 		JPanel logoPanel = new JPanel();
 		logoPanel.setBackground(background);
 		GridBagLayout gbl = new GridBagLayout();
+		logoPanel.setLayout(gbl);
 		gbl.rowWeights = new double[] {.1, 1, .1};
 		GridBagConstraints c = new GridBagConstraints();
 
-		c.gridx = 0;
+		JPanel settingsPanel = new JPanel(new GridLayout(1, 3));
+		settingsPanel.setBackground(background);
+		settingsPanel.add(buttonMaker("Settings", "settings"));
+		settingsPanel.add(new JLabel(" "));
+		settingsPanel.add(new JLabel(" "));
+
+		c.gridx = -1;
 		c.gridy = 0;
-		logoPanel.add(new JLabel(" "), c);
+		settingsPanel.add(new JLabel(" "));
+		logoPanel.add(settingsPanel, c);
 
 		c.gridx = 0;
 		c.gridy = 1;
@@ -170,7 +186,7 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 		logoPanel.add(new JLabel(" "), c);
 
 		topStuffPanel.add(logoPanel);
-		
+
 		webcamPanel = new WebcamPanel(webcam);
 		//webcam.close();
 		webcam.open();
@@ -273,12 +289,39 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 		}
 	}
 
-	private boolean startedVid = false;
-	private boolean startedSec = false;
-	private InfiniteVideoWriter previous;
-	private VideoWriter next;
+	public String checkForEmail()
+	{
+		try 
+		{
+			File file = new File("userEmailAddresses.txt");
+			Scanner scan = new Scanner(file);
+			if(scan.hasNext())
+			{
+				return scan.next();
+			}
 
-	
+			else
+			{
+				String str = (String) JOptionPane.showInputDialog(this,
+						"Please Enter Your Email Address",
+						"Email Address",
+						JOptionPane.QUESTION_MESSAGE,
+						null,
+						null,
+						"text@domain.com");
+				FileWriter myWriter = new FileWriter("userEmailAddresses.txt");
+				if(str!= null) myWriter.write(str);
+				else return null;
+				myWriter.close();
+				return str;
+			}
+		}
+		catch(Exception e)
+		{
+			return null;
+		}
+	}
+
 	public void actionPerformed(ActionEvent e)
 	{
 		String text = e.getActionCommand();
@@ -295,11 +338,11 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 				LocalDateTime now = LocalDateTime.now();
 				String path = "Captures\\" + dtf.format(now) + ".png";
 				File file = new File(path);
-				
+
 				ImageIO.write(webcam.getImage(), "PNG", file);
 				file.createNewFile();
 			} 
-			
+
 			catch (IOException f) 
 			{
 				f.printStackTrace();
@@ -318,23 +361,24 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 					startStop.setText("Stop Video Recording");
 				}
 			}
-			
+
 			else 
 			{
 				previous.cont = false;
 				startStop.setText("Start Video Recording");
 			}
-			
+
 			previous = writer;
-			
+
 			startedVid = !startedVid;
 		}
 
 		else if(text.equals("security"))
 		{
 			phoneNum = checkForPhoneNumber();
-			
-			if(phoneNum != null)
+			toEmailAddress = checkForEmail();
+
+			if(phoneNum != null || toEmailAddress != null)
 			{
 				writer = new VideoWriter(webcam);
 				detector = new WebcamMotionDetector(Webcam.getDefault());
@@ -366,28 +410,65 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 				e1.printStackTrace();
 			}
 		}
+
+		else if(text.equals("settings"))
+		{
+			displaySettings();
+		}
+		else if(text.equals("choose file path"))
+		{
+			System.out.println("hi");
+		}
 	}
+
 	public void motionDetected(WebcamMotionEvent wme) 
 	{
-		try {
+		try 
+		{
 			if(!writer.isRunning)
 			{
-				Thread.sleep(500);
-				TextMessage.sendText(phoneNum);
+				System.out.println("Motion Detected - Starting Recording");
 				writer.start();
+				Thread.sleep(40000);
+				TextMessage.sendText(phoneNum);
+				File file = new File(VideoWriter.getFileName());
+				SendMailJavaAPI.sendEmail(toEmailAddress, fromEmailAddress, emailUsername, emailPassword, file);
 			}
-		} catch (Exception e1) 
+		} 
+
+		catch (Exception e1) 
 		{
+			System.out.println("New Writer Created");
 			writer = new VideoWriter(webcam);
 		}
+	}
+
+	private void displaySettings()
+	{
+
+		JFrame settingsMenu = new JFrame("Settings");
+		settingsMenu.setBackground(background);
+		JPanel settingsWindowLeft = new JPanel();
+		JPanel settingsWindowRight = new JPanel();
+		settingsMenu.setSize(640, 480);
+		settingsMenu.setLocationRelativeTo(this);
+
+		settingsWindowLeft.setBackground(background);
+		GridBagLayout gbl = new GridBagLayout();
+		settingsWindowLeft.setLayout(gbl);
+
+		settingsMenu.add(settingsWindowLeft);
+		settingsMenu.add(settingsWindowRight);
+		settingsMenu.setVisible(true);
+		
+		chooseFilePath = buttonMaker("Choose File Path", "choose file path");
+		chooseFilePath.setVisible(true);
+		settingsMenu.add(chooseFilePath);
 	}
 }
 
 class TextBubbleBorder extends AbstractBorder {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private Color color;
 	private int thickness = 4;
