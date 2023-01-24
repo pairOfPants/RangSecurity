@@ -10,7 +10,7 @@
  <a href="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total">
         <img src="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total"></a>
  <a href="github.com/followers/pairOfPants?style=social">
-        <img src="https://img.shields.io/github/followers/pairOfPants?style=social"></a>
+        <img src="https://github.com/pairOfPants/follow"></a>
 <br><i>Note: This project is unfinished. It was originally created by four high school students at a local hackathon, and further development is now being implemented.</i> <br>
 Estimated Completion Date: <b>TBD</b>
 <h2 style="font-size:30px;"> Project Description </h2>
