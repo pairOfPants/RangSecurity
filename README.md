@@ -1,4 +1,4 @@
-<h1 style="font-size:60px;"> Rang - Security for Everyone </h1>
+<h1 style="font-size:12px;"> Rang - Security for Everyone </h1>
 <a href="https://github.com/simon-kowerski/RangSecurity/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/simon-kowerski/RangSecurity" /></a>
 <a href="https://img.shields.io/github/commit-activity/w/simon-kowerski/RangSecurity">
