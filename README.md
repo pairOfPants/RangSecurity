@@ -30,10 +30,25 @@ Rang Cameras are an affordable security feature that have built in motion detect
  </ul>
  <h2> Image Gallery</h2>
  <h2> Downloads and Installation</h2>
- <h4> Downlad </h4>
- <h4> Install </h4>
+ <h3> Downlad </h3>
+ Here is the .zip file for you to download and add to any eclipse workspace. Eventually the final version of this project will be in a .exe format and will be found on Rang's company website (still in development)
+ <br>Download File: <i>not working currently </i>
+ <h3> Install </h3>
+ The first thing to do, once the zip is download, is to import all the external libraries, I have done this through maven. Attatched is the pom file, feel free to copy it. I will also attatch everything here:
+ <h4> Maven </h4>
  <h2> How to Use </h2>
- <h2> Connecting Additional Cameras </h2>                                                
+ Once the application is downloaded and installed, just run the program and everything should be self-explanatory. You will need to create a directory to store photos and videos on, I reccomend an external hard drive but any directory will do. We also ask for your phone number and email which are used to send texts and emails accordingly when security mode is on and there is an alert, but know that Rang does not store this information and these contacts will be stored locally on text files inside the project directory. 
+<br> Here is a brief overviw of each of the functions, as they stand in current development:
+ <ol> 
+ <li> Capture Photo: Takes a photo from your camera's webcam and stores it inside capture directory </li>
+ <li> Start/Stop Video: Takes a video (bursts of photos) from the duration the start button is hit until the stop button is hit </li>
+ <li> Security Mode: Off means that you will not recieve alerts, on means that every time motion is detected the program will record a 40 second video, save it, and email it out to you (assuming you elect to have emails)</li>
+<li> Settings: <i>Still in development</i></li>
+<li> Multi-Camera Arrangement: <i>Still in development</i></li>
+ <h2> Connecting Additional Cameras </h2>
+ <b> To Be Implemented </b>
  <h2> Other Settings </h2>
+ Other settings thus far include the ability to control the arrangement of your computer's webcams, if multiple are installed, the ability to choose push notifications, the ability to add and remove cameras from the system, and the ability to change the directory of where the videos are stored, or even store them in the cloud. <br> Settings to be incoorporated include the ability to capture a screen recording during security mode in addition to camera recording, the option to record audio, and the ability to change the length and quality of the security mode videos, for file size and performance purposes.
  <h2> How to Contribute </h2>
+ <b> To Be Implemented </b>
  <h2> License </h2>
