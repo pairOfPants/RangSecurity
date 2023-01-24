@@ -50,65 +50,65 @@ Rang Cameras are an affordable security feature that have built in motion detect
  <h4> Maven </h4>
  Maven, for those who don't know, is a tool which helps import external java libraries. You don't need to download anything onto your IDE, because this project already is a maven build. All you need to do is locate the pom folder and make sure the following code is under the dependencies folder. 
                                         
-  <dependencies>
-    <!-- JUnit depencency for Maven Testing -->
-     <dependency>
-       <groupId>junit</groupId>
-       <artifactId>junit</artifactId>
-       <version>4.11</version>
-       <scope>test</scope>
-     </dependency>
+     <dependencies>
+        <!-- JUnit depencency for Maven Testing -->
+        <dependency>
+           <groupId>junit</groupId>
+           <artifactId>junit</artifactId>
+           <version>4.11</version>
+           <scope>test</scope>
+        </dependency>
  
-     <!-- Webcaam Capture API for Webcam Feed -->
-     <dependency>
-       <groupId>com.github.sarxos</groupId>
-       <artifactId>webcam-capture</artifactId>
-       <version>0.3.11</version>
-     </dependency>
+         <!-- Webcaam Capture API for Webcam Feed -->
+         <dependency>
+           <groupId>com.github.sarxos</groupId>
+           <artifactId>webcam-capture</artifactId>
+           <version>0.3.11</version>
+         </dependency>
 
-     <!-- SLF4J depencency for Webcam Capture -->
-     <dependency>
-       <groupId>org.slf4j</groupId>
-       <artifactId>slf4j-api</artifactId>
-       <version>2.0.6</version>
-     </dependency>
+        <!-- SLF4J depencency for Webcam Capture -->
+        <dependency>
+           <groupId>org.slf4j</groupId>
+           <artifactId>slf4j-api</artifactId>
+           <version>2.0.6</version>
+        </dependency>
                                                                
-     <!-- SLF4J depencency for Webcam Capture -->
-     <dependency>
-       <groupId>org.slf4j</groupId>
-       <artifactId>slf4j-simple</artifactId>
-       <version>2.0.6</version>
-     </dependency>
+        <!-- SLF4J depencency for Webcam Capture -->
+        <dependency>
+           <groupId>org.slf4j</groupId>
+           <artifactId>slf4j-simple</artifactId>
+           <version>2.0.6</version>
+        </dependency>
                                                               
-     <!-- Xuggle API for Creating Videos -->
-     <dependency>
-       <groupId>xuggle</groupId>
-       <artifactId>xuggle-xuggler</artifactId>
-       <version>5.4</version>
-     </dependency>
+        <!-- Xuggle API for Creating Videos -->
+        <dependency>
+           <groupId>xuggle</groupId>
+           <artifactId>xuggle-xuggler</artifactId>
+           <version>5.4</version>
+        </dependency>
                                                             
-                                                        <!-- Twilio API for Sending Texts -->
-                                                        <dependency>
-                                                           <groupId>com.twilio.sdk</groupId>
-                                                           <artifactId>twilio</artifactId>
-                                                           <version>9.2.1</version>
-                                                           <scope>compile</scope>
-                                                        </dependency>
+        <!-- Twilio API for Sending Texts -->
+        <dependency>
+            <groupId>com.twilio.sdk</groupId>
+            <artifactId>twilio</artifactId>
+            <version>9.2.1</version>
+            <scope>compile</scope>
+        </dependency>
 
-                                                         <!-- Dropbox API for Cloud Storage -->
-                                                         <dependency>
-                                                            <groupId>com.dropbox.core</groupId>
-                                                            <artifactId>dropbox-core-sdk</artifactId>
-                                                            <version>5.4.4</version>
-                                                         </dependency>
+        <!-- Dropbox API for Cloud Storage -->
+        <dependency>
+           <groupId>com.dropbox.core</groupId>
+           <artifactId>dropbox-core-sdk</artifactId>
+           <version>5.4.4</version>
+        </dependency>
                                                              
-                                                         <!-- JavaMail API for Sending Emails -->
-                                                         <dependency>
-                                                            <groupId>javax.mail</groupId>
-                                                            <artifactId>javax.mail-api</artifactId>
-                                                            <version>1.6.2</version>
-                                                        </dependency>
-                                                     </dependencies>
+        <!-- JavaMail API for Sending Emails -->
+        <dependency>
+          <groupId>javax.mail</groupId>
+          <artifactId>javax.mail-api</artifactId>
+          <version>1.6.2</version>
+        </dependency>
+     </dependencies>
  Note, you will also need to add the following code to your repositories folder:
  
     <repository>
