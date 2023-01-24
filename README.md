@@ -1,4 +1,4 @@
-_<h1 style="font-size:60px;"> Rang - Security for Everyone </h1>
+<h1 style="font-size:60px;"> Rang - Security for Everyone </h1>
 <i>Note: This project is unfinished. It was originally created by four high school students at a local hackathon, and further development is now being implemented.</i> <br>
 Estimated Completion Date: <b>TBD</b>
 <h2 style="font-size:30px;"> Project Description </h2>
