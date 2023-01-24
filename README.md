@@ -9,8 +9,8 @@
         <img src="https://img.shields.io/website?url=https%3A%2F%2Fdestroybigcorporate.wixsite.com%2FRangRangRang"></a> 
  <a href="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total">
         <img src="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total"></a>
- <a href="https://github.com/pairOfPants/follow">
-        <img src="github.com/followers/pairOfPants?style=social"></a>
+ <a href="github.com/pairOfPants">
+        <img src="https://img.shields.io/github/followers/pairOfPants?style=social"></a>
 <br><i>Note: This project is unfinished. It was originally created by four high school students at a local hackathon, and further development is now being implemented.</i> <br>
 Estimated Completion Date: <b>TBD</b>
 <h2 style="font-size:30px;"> Project Description </h2>
