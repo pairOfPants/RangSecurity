@@ -5,7 +5,7 @@
         <img src="https://img.shields.io/github/commit-activity/w/simon-kowerski/RangSecurity"></a>
 <a href="https://img.shields.io/github/issues/simon-kowerski/RangSecurity">
         <img src="https://img.shields.io/github/issues/simon-kowerski/RangSecurity"></a>
-<a href="https://img.shields.io/website?url=https%3A%2F%2Fdestroybigcorporate.wixsite.com%2FRangRangRang">
+<a href="https://destroybigcorporate.wixsite.com/rangrangrang">
         <img src="https://img.shields.io/website?url=https%3A%2F%2Fdestroybigcorporate.wixsite.com%2FRangRangRang"></a> 
  <a href="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total">
         <img src="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total"></a>
