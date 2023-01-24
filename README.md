@@ -52,3 +52,4 @@ Rang Cameras are an affordable security feature that have built in motion detect
  <h2> How to Contribute </h2>
  <b> To Be Implemented </b>
  <h2> License </h2>
+This project is protected under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License. <br>In short, anyone can edit, download, and use our code as long as any modification is republished back to this repository and our code is not used for your own financial gain. To read the full license, click <small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/LICENSE'>HERE</a></i></small>
