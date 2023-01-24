@@ -38,42 +38,42 @@ Rang Cameras are an affordable security feature that have built in motion detect
  <h4> Maven </h4>
  Maven, for those who don't know, is a tool which helps import external java libraries. You don't need to download anything onto your IDE, because this project already is a maven build. All you need to do is locate the pom folder and make sure the following code is under the dependencies folder. 
                                         
-                                                     <dependencies>
-                                                        <!-- JUnit depencency for Maven Testing -->
-                                                        <dependency>
-                                                            <groupId>junit</groupId>
-                                                            <artifactId>junit</artifactId>
-                                                            <version>4.11</version>
-                                                            <scope>test</scope>
-                                                         </dependency>
+  <dependencies>
+    <!-- JUnit depencency for Maven Testing -->
+     <dependency>
+       <groupId>junit</groupId>
+       <artifactId>junit</artifactId>
+       <version>4.11</version>
+       <scope>test</scope>
+     </dependency>
  
-                                                         <!-- Webcaam Capture API for Webcam Feed -->
-                                                         <dependency>
-                                                            <groupId>com.github.sarxos</groupId>
-                                                            <artifactId>webcam-capture</artifactId>
-                                                            <version>0.3.11</version>
-                                                         </dependency>
+     <!-- Webcaam Capture API for Webcam Feed -->
+     <dependency>
+       <groupId>com.github.sarxos</groupId>
+       <artifactId>webcam-capture</artifactId>
+       <version>0.3.11</version>
+     </dependency>
 
-                                                         <!-- SLF4J depencency for Webcam Capture -->
-                                                         <dependency>
-                                                             <groupId>org.slf4j</groupId>
-                                                             <artifactId>slf4j-api</artifactId>
-                                                             <version>2.0.6</version>
-                                                         </dependency>
+     <!-- SLF4J depencency for Webcam Capture -->
+     <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-api</artifactId>
+       <version>2.0.6</version>
+     </dependency>
                                                                
-                                                         <!-- SLF4J depencency for Webcam Capture -->
-                                                         <dependency>
-                                                            <groupId>org.slf4j</groupId>
-                                                            <artifactId>slf4j-simple</artifactId>
-                                                            <version>2.0.6</version>
-                                                        </dependency>
+     <!-- SLF4J depencency for Webcam Capture -->
+     <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-simple</artifactId>
+       <version>2.0.6</version>
+     </dependency>
                                                               
-                                                        <!-- Xuggle API for Creating Videos -->
-                                                        <dependency>
-                                                           <groupId>xuggle</groupId>
-                                                           <artifactId>xuggle-xuggler</artifactId>
-                                                           <version>5.4</version>
-                                                        </dependency>
+     <!-- Xuggle API for Creating Videos -->
+     <dependency>
+       <groupId>xuggle</groupId>
+       <artifactId>xuggle-xuggler</artifactId>
+       <version>5.4</version>
+     </dependency>
                                                             
                                                         <!-- Twilio API for Sending Texts -->
                                                         <dependency>
@@ -99,6 +99,10 @@ Rang Cameras are an affordable security feature that have built in motion detect
                                                      </dependencies>
  Note, you will also need to add the following code to your repositories folder:
  
+    <repository>
+        <id>xuggle repo</id>
+        <url>https://files.liferay.com/mirrors/xuggle.googlecode.com/svn/trunk/repo/share/java/</url>
+    </repository>
   
  <h2> How to Use </h2>
  Once the application is downloaded and installed, just run the program and everything should be self-explanatory. You will need to create a directory to store photos and videos on, I reccomend an external hard drive but any directory will do. We also ask for your phone number and email which are used to send texts and emails accordingly when security mode is on and there is an alert, but know that Rang does not store this information and these contacts will be stored locally on text files inside the project directory. 
