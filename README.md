@@ -36,6 +36,14 @@ Rang Cameras are an affordable security feature that have built in motion detect
  <h3> Install </h3>
  The first thing to do, once the zip is download, is to import all the external libraries, I have done this through maven. Attatched is the pom file, feel free to copy it. I will also attatch everything here:
  <h4> Maven </h4>
+ Maven, for those who don't know, is a tool which helps import external java libraries. You don't need to download anything onto your IDE, because this project already is a maven build. All you need to do is locate the pom folder and make sure the following code is under the dependencies folder. 
+```
+<dependency>
+    <groupId>com.github.mattamorphic</groupId>
+    <artifactId>github-maven-package-example</artifactId>
+    <version>VERSION</version>
+</dependency>
+```
  <h2> How to Use </h2>
  Once the application is downloaded and installed, just run the program and everything should be self-explanatory. You will need to create a directory to store photos and videos on, I reccomend an external hard drive but any directory will do. We also ask for your phone number and email which are used to send texts and emails accordingly when security mode is on and there is an alert, but know that Rang does not store this information and these contacts will be stored locally on text files inside the project directory. 
 <br> Here is a brief overviw of each of the functions, as they stand in current development:
