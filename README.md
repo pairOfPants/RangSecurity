@@ -9,9 +9,11 @@
         <img src="https://img.shields.io/website?url=https%3A%2F%2Fdestroybigcorporate.wixsite.com%2FRangRangRang"></a> 
  <a href="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total">
         <img src="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total"></a>
+ <a href="https://www.paypal.com/donate/?business=7565XAPM5MC9U&no_recurring=0&item_name=All+donations+help+to+fund+RangSecurity+and+are+used+to+purchase+additional+cameras+to+help+start+the+comapny.+&currency_code=USD">
+ <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" /></a>
  <a href="https://github.com/pairOfPants">
         <img src="https://img.shields.io/github/followers/pairOfPants?style=social"></a>
-<br><i>Note: This project is unfinished. It was originally created by four high school students at a local hackathon, and further development is now being implemented.</i> <br>
+ <br><i>Note: This project is unfinished. It was originally created by four high school students at a local hackathon, and further development is now being implemented.</i> <br>
 Estimated Completion Date: <b>TBD</b>
 <h2 style="font-size:30px;"> Project Description </h2>
 Rang aims to take something that is overpriced and exploited, and make it accessible to everyone. Here at Rang, our mission is to help make information available and accessible to everyone, while doing so at an affordable price. We draw our inspirations from Ring Doorbells, and with our app, you can have equivalent power for a fraction of the cost.
@@ -141,7 +143,7 @@ Rang Cameras are an affordable security feature that have built in motion detect
  <i>I highly reccomend visiting each individual's profile to view their other work, separate from this project.</i>
  <h2> How to Contribute </h2>
 While our license prevents outside use for financial gain, feel free to contribute to this repository through pull requests. If you are looking for another way to contribute to this project, all donations to the paypal linked below are greatly appreciated, and they help speed up development astronomically.
- <br>
+ <br> <br>
  <a href="https://www.paypal.com/donate/?business=7565XAPM5MC9U&no_recurring=0&item_name=All+donations+help+to+fund+RangSecurity+and+are+used+to+purchase+additional+cameras+to+help+start+the+comapny.+&currency_code=USD">
  <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" /></a>
  
