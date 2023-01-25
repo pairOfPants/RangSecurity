@@ -37,6 +37,7 @@ Rang Cameras are an affordable security feature that have built in motion detect
   <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-how-to-use-'>How to Use</a></i></small></li>
  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-connecting-additional-cameras-'>Connecting Additional Cameras</a></i></small></li>
  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-other-settings-'>Other Settings</a></i></small></li>
+ <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-contributors-'>Contributors</a></i></small></li>
  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-how-to-contribute-'>How to Contribute</a></i></small></li>
  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-license-'>License</a></i></small></li>
  </ul>
@@ -129,7 +130,21 @@ Rang Cameras are an affordable security feature that have built in motion detect
  <b> To Be Implemented </b>
  <h2> Other Settings </h2>
  Other settings thus far include the ability to control the arrangement of your computer's webcams, if multiple are installed, the ability to choose push notifications, the ability to add and remove cameras from the system, and the ability to change the directory of where the videos are stored, or even store them in the cloud. <br> Settings to be incoorporated include the ability to capture a screen recording during security mode in addition to camera recording, the option to record audio, and the ability to change the length and quality of the security mode videos, for file size and performance purposes.
+ <h2> Contributors </h2>
+ Below is a list of all contributors and their roles/responsiilities in this project
+ <ol>
+ <li> pairOfPants - Head Developer, created the backend code for this project and systems tester </li>
+ <li> simon-kowerski - Frontend Java Developer, created the GUI interface to run the backend code </li>
+ <li> serene - Website Developer, made website in HTML, JavaScript, and CSS</li>
+ <li> mantis - Assistant Java Backend Developer - Optimized code with Multithreading </li>
+ </ol><br>
+ <i>I highly reccomend visiting each individual's profile to view their other work, separate from this project.</i>
  <h2> How to Contribute </h2>
- <b> To Be Implemented </b>
+While our license prevents outside use for financial gain, feel free to contribute to this repository through pull requests. If you are looking for another way to contribute to this project, all donations to the paypal linked below are greatly appreciated, and they help speed up development astronomically.
+ <br>
+ <a href="https://www.paypal.com/donate/?business=7565XAPM5MC9U&no_recurring=0&item_name=All+donations+help+to+fund+RangSecurity+and+are+used+to+purchase+additional+cameras+to+help+start+the+comapny.+&currency_code=USD">
+ <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" /></a>
+ 
+<br>
  <h2> License </h2>
 This project is protected under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License. <br>In short, anyone can edit, download, and use our code as long as any modification is republished back to this repository and our code is not used for your own financial gain. To read the full license, click <small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/LICENSE'>HERE</a></i></small>
