@@ -20,6 +20,7 @@ public class VideoWriter extends Thread
 	private Webcam webcam;
 	public boolean isRunning = false;
 	public static File saveFile;
+	protected static IVideoPicture frame;
 	
 	public VideoWriter(Webcam cam)
 	{
@@ -30,8 +31,7 @@ public class VideoWriter extends Thread
 	{
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH-mm-ss");
 		LocalDateTime now = LocalDateTime.now();
-		String path = "Captures\\" + dtf.format(now) + ".mp4";
-		saveFile = new File(path);
+		saveFile = new File(App.filepath + "\\"+ dtf.format(now) + ".mp4");
 		
 		//Initialize media writer
 		IMediaWriter writer = ToolFactory.makeWriter(saveFile.getAbsolutePath());
@@ -45,9 +45,9 @@ public class VideoWriter extends Thread
 			BufferedImage image = ConverterFactory.convertToType(webcam.getImage(), BufferedImage.TYPE_3BYTE_BGR);
 			IConverter converter = ConverterFactory.createConverter(image, IPixelFormat.Type.YUV420P);
 			
-			IVideoPicture frame = converter.toPicture(image, (System.currentTimeMillis()-start) * 1000);
+			frame = converter.toPicture(image, (System.currentTimeMillis()-start) * 1000);
 			frame.setKeyFrame(i == 0);
-			frame.setQuality(100);
+			frame.setQuality(66);
 			
 			writer.encodeVideo(0, frame);
 		}
