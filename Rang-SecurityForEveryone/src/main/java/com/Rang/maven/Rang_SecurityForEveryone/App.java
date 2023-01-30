@@ -7,6 +7,8 @@ import java.awt.geom.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -43,10 +45,10 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 	private VideoWriter writer;
 	private WebcamMotionDetector detector;
 	private JButton security;
-	public static String phoneNum;
+	public static String phoneNum = "";
 
 
-	private String toEmailAddress;
+	public static String toEmailAddress = "";
 	private final String fromEmailAddress = "destroyingbigcorporate@gmail.com";
 	final String emailUsername = "destroyingbigcorporate@gmail.com"; //will always be the from address
 	final String emailPassword = "jduslfsmegehdiee"; //app password needs to be changed when we make our final business email
@@ -57,7 +59,11 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 	private VideoWriter next;
 	
 	
-	private JButton chooseFilePath;
+	private static boolean texting = true;
+	private static boolean emailing;
+	
+	protected static int n = -1;
+	protected static String filepath;
 
 
 	public static void main(String[] args)
@@ -142,6 +148,13 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 		setContentPane(panel);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
+		try {
+			filepath = new String(Files.readAllBytes(Paths.get("captureFilePath.txt")));
+			if(filepath != null) n = 1;
+			setFilePath();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	}
 
@@ -188,7 +201,6 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 		topStuffPanel.add(logoPanel);
 
 		webcamPanel = new WebcamPanel(webcam);
-		//webcam.close();
 		webcam.open();
 		webcamPanel = new WebcamPanel(webcam);
 		webcamPanel.setFPSDisplayed(true);
@@ -336,8 +348,7 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 			{
 				DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH-mm-ss");
 				LocalDateTime now = LocalDateTime.now();
-				String path = "Captures\\" + dtf.format(now) + ".png";
-				File file = new File(path);
+				File file = new File(filepath + "\\"+ dtf.format(now) + ".png");
 
 				ImageIO.write(webcam.getImage(), "PNG", file);
 				file.createNewFile();
@@ -375,10 +386,62 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 
 		else if(text.equals("security"))
 		{
-			phoneNum = checkForPhoneNumber();
-			toEmailAddress = checkForEmail();
-
-			if(phoneNum != null || toEmailAddress != null)
+			if(texting)
+			{
+				phoneNum = checkForPhoneNumber();
+				if(phoneNum != null)
+				{
+					writer = new VideoWriter(webcam);
+					detector = new WebcamMotionDetector(Webcam.getDefault());
+					detector.setInterval(500); // one check per 500 ms
+					if(!startedSec)
+					{
+						if(!startedVid)
+						{
+							detector.addMotionListener(this);
+							detector.start();
+							security.setText("Security Mode ON");
+						}
+					}
+					else
+					{
+						writer.isRunning = true;
+						next.isRunning =false;
+						security.setText("Security Mode OFF");
+					}
+					next = writer;
+					startedSec = !startedSec;
+				}
+			}
+			else if(emailing)
+			{
+				toEmailAddress = checkForEmail();
+				if(toEmailAddress != null)
+				{
+					writer = new VideoWriter(webcam);
+					detector = new WebcamMotionDetector(Webcam.getDefault());
+					detector.setInterval(500); // one check per 500 ms
+					if(!startedSec)
+					{
+						if(!startedVid)
+						{
+							detector.addMotionListener(this);
+							detector.start();
+							security.setText("Security Mode ON");
+						}
+					}
+					else
+					{
+						writer.isRunning = true;
+						next.isRunning =false;
+						security.setText("Security Mode OFF");
+					}
+					next = writer;
+					startedSec = !startedSec;
+				}
+			}
+			
+			else
 			{
 				writer = new VideoWriter(webcam);
 				detector = new WebcamMotionDetector(Webcam.getDefault());
@@ -402,10 +465,12 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 				startedSec = !startedSec;
 			}
 		}
+		
 		else if(text.equals("seeall"))
 		{
 			try {
-				Desktop.getDesktop().open(new File("Captures\\"));
+				//Desktop.getDesktop().open(new File("Captures\\"));
+				Desktop.getDesktop().open(new File(filepath));
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}
@@ -414,10 +479,6 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 		else if(text.equals("settings"))
 		{
 			displaySettings();
-		}
-		else if(text.equals("choose file path"))
-		{
-			System.out.println("hi");
 		}
 	}
 
@@ -430,9 +491,9 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 				System.out.println("Motion Detected - Starting Recording");
 				writer.start();
 				Thread.sleep(40000);
-				TextMessage.sendText(phoneNum);
 				File file = new File(VideoWriter.getFileName());
-				SendMailJavaAPI.sendEmail(toEmailAddress, fromEmailAddress, emailUsername, emailPassword, file);
+				if(texting)TextMessage.sendText(phoneNum);
+				else if(emailing)SendMailJavaAPI.sendEmail(toEmailAddress, fromEmailAddress, emailUsername, emailPassword, file);
 			}
 		} 
 
@@ -445,25 +506,44 @@ public class App extends JFrame implements ActionListener, WebcamMotionListener
 
 	private void displaySettings()
 	{
+		if(writer != null && !writer.isRunning)
+		{
+			int n = JOptionPane.showOptionDialog(new JOptionPane(), "You cannot open settings while a video is being recorded","Warning",JOptionPane.WARNING_MESSAGE,JOptionPane.OK_OPTION,null,null,null);
+		}
+		else
+		{
+			SettingsMenu settings = new SettingsMenu(background, buttonColor, fontColor, this);
+		}
+	}
 
-		JFrame settingsMenu = new JFrame("Settings");
-		settingsMenu.setBackground(background);
-		JPanel settingsWindowLeft = new JPanel();
-		JPanel settingsWindowRight = new JPanel();
-		settingsMenu.setSize(640, 480);
-		settingsMenu.setLocationRelativeTo(this);
+	public static void isEmailing(boolean b) 
+	{
+		emailing = b;
+	}
 
-		settingsWindowLeft.setBackground(background);
-		GridBagLayout gbl = new GridBagLayout();
-		settingsWindowLeft.setLayout(gbl);
+	public static void isTexting(boolean b) 
+	{
+		texting = b;
+	}
 
-		settingsMenu.add(settingsWindowLeft);
-		settingsMenu.add(settingsWindowRight);
-		settingsMenu.setVisible(true);
+	public static void setFilePath() throws IOException //n is declared an instance variable so that dialog is only prompted once
+	{ 
+		if(n == -1) n = JOptionPane.showOptionDialog(new JOptionPane(), "In order to use this program you must select a filepath to store caaptures","Set Filepath",JOptionPane.WARNING_MESSAGE,JOptionPane.OK_OPTION,null,null,null);
+		if(n == 0)
+		{
+			JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
+            fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            int option = fileChooser.showOpenDialog(fileChooser);
+            if(option == JFileChooser.APPROVE_OPTION) filepath = fileChooser.getSelectedFile().getAbsolutePath();
+            else if(filepath == null)System.exit(0);
+			
+			
+			FileWriter myWriter = new FileWriter("captureFilePath.txt");
+			System.out.println(filepath);
+			if(filepath!= null) myWriter.write(filepath);
+			myWriter.close();
+		}
 		
-		chooseFilePath = buttonMaker("Choose File Path", "choose file path");
-		chooseFilePath.setVisible(true);
-		settingsMenu.add(chooseFilePath);
 	}
 }
 
