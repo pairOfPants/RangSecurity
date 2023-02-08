@@ -28,20 +28,20 @@ Rang Cameras are an affordable security feature that have built in motion detect
 </ul>
 <h2 style="font-size:45px;"> Table of Contents </h2>
 <ul>
-  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-project-description-'>Product Description</a></i></small></li>
-  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-image-gallery'>Image Gallery</a></i></small></li>
-  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-downloads-and-installation'>Downloads and Installation</a></i></small></li>
+  <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-project-description-'>Product Description</a></i></small></li>
+  <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-image-gallery'>Image Gallery</a></i></small></li>
+  <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-downloads-and-installation'>Downloads and Installation</a></i></small></li>
  <ol padding-bottom: 0;">
-  <li style="margin-left:2em"><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-downlad-'>Download</a></i></small></li>
-  <li style="margin-left:2em; padding-bottom: 0;"><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-install-'>Install</a></i></small></li>
+  <li style="margin-left:2em"><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-downlad-'>Download</a></i></small></li>
+  <li style="margin-left:2em; padding-bottom: 0;"><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-install-'>Install</a></i></small></li>
   </ol>
   </li>
-  <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-how-to-use-'>How to Use</a></i></small></li>
- <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-connecting-additional-cameras-'>Connecting Additional Cameras</a></i></small></li>
- <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-other-settings-'>Other Settings</a></i></small></li>
- <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-contributors-'>Contributors</a></i></small></li>
- <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-how-to-contribute-'>How to Contribute</a></i></small></li>
- <li><small><i><a href='https://github.com/simon-kowerski/RangSecurity/blob/main/README.md#-license-'>License</a></i></small></li>
+  <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-how-to-use-'>How to Use</a></i></small></li>
+ <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-connecting-additional-cameras-'>Connecting Additional Cameras</a></i></small></li>
+ <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-other-settings-'>Other Settings</a></i></small></li>
+ <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-contributors-'>Contributors</a></i></small></li>
+ <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-how-to-contribute-'>How to Contribute</a></i></small></li>
+ <li><small><i><a href='https://github.com/pairOfPants/RangSecurity/blob/main/README.md#-license-'>License</a></i></small></li>
  </ul>
  <h2> Image Gallery</h2>
  <h2> Downloads and Installation</h2>
@@ -137,7 +137,7 @@ Rang Cameras are an affordable security feature that have built in motion detect
  <ol>
  <li> pairOfPants - Head Developer, created the backend code for this project and systems tester </li>
  <li> simon-kowerski - Frontend Java Developer, created the GUI interface to run the backend code </li>
- <li> serene - Website Developer, made website in HTML, JavaScript, and CSS</li>
+ <li> serenexy - Website Developer, made website in HTML, JavaScript, and CSS</li>
  <li> mantis - Assistant Java Backend Developer - Optimized code with Multithreading </li>
  </ol><br>
  <i>I highly reccomend visiting each individual's profile to view their other work, separate from this project.</i>
