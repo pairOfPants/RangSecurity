@@ -1,4 +1,4 @@
-<h1 style="font-size:12px;"> Rang - Security for Everyone </h1>
+gbb<h1 style="font-size:12px;"> Rang - Security for Everyone </h1>
 <a href="https://github.com/simon-kowerski/RangSecurity/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/simon-kowerski/RangSecurity" /></a>
 <a href="https://img.shields.io/github/commit-activity/w/simon-kowerski/RangSecurity">
@@ -14,11 +14,11 @@
  <a href="https://github.com/pairOfPants">
         <img src="https://img.shields.io/github/followers/pairOfPants?style=social"></a>
  <br><i>Note: This project is unfinished. It was originally created by four high school students at a local hackathon, and further development is now being implemented.</i> <br>
-Estimated Completion Date: <b>03-26-2023</b>
+Estimated Completion Date: <b>01-01-2024</b>
 <h2 style="font-size:30px;"> Project Description </h2>
 Rang aims to take something that is overpriced and exploited, and make it accessible to everyone. Here at Rang, our mission is to help make information available and accessible to everyone, while doing so at an affordable price. We draw our inspirations from Ring Doorbells, and with our app, you can have equivalent power for a fraction of the cost.
 <br> <br>
-Rang Cameras are an affordable security feature that have built in motion detection and human verification systems that can access and capture your computer's camera(s) when any motion is detected. When our app is active, it will be able to send you a text message or email informing you of the security breach at your computer and let you see it in real time. Additional features include the ability to start and stop the feed, capture a photo, and toggle our security mode. Every Photo you take can be accessed locally and will *hopefully* be accessable from the cloud in the future.
+Rang Cameras are an affordable security feature that have built in motion detection and human verification systems that can access and capture your computer's camera(s) when any motion is detected. When our app is active, it will be able to send you a text message or email informing you of the security breach at your computer and let you see it in real time. Additional features include the ability to start and stop the feed, capture a photo, and toggle our security mode. Every Photo you take can be accessed locally and will *optionally* be accessable from the cloud.
 <br>
 <h4> Challenges Faced </h4>
 <ul>
@@ -46,10 +46,11 @@ Rang Cameras are an affordable security feature that have built in motion detect
  <h2> Image Gallery</h2>
  <h2> Downloads and Installation</h2>
  <h3> Downlad </h3>
- Here is the .zip file for you to download and add to any eclipse workspace. Eventually the final version of this project will be in a .exe format and will be found on Rang's company website (still in development)
- <br>Download File: <i>not working currently </i>
+ If you would like to code on Rang, feel free to use the .zip above. For downloadable releases, see the releases page
+ <i> Note: Many of the features in the most recent release do not work as intended. This project is unfinished and development is continuous, I just needed an executable build for a presentation I had </i>
  <h3> Install </h3>
  The first thing to do, once the zip is download, is to import all the external libraries, I have done this through maven. Attatched is the pom file, feel free to copy it. I will also attatch everything here:
+<i> Note: If downloading from the releases page all you need to do is run the file - None of these steps apply to you. </i>
  <h4> Maven </h4>
  Maven, for those who don't know, is a tool which helps import external java libraries. You don't need to download anything onto your IDE, because this project already is a maven build. All you need to do is locate the pom folder and make sure the following code is under the dependencies folder. 
                                         
@@ -96,13 +97,6 @@ Rang Cameras are an affordable security feature that have built in motion detect
             <artifactId>twilio</artifactId>
             <version>9.2.1</version>
             <scope>compile</scope>
-        </dependency>
-
-        <!-- Dropbox API for Cloud Storage -->
-        <dependency>
-           <groupId>com.dropbox.core</groupId>
-           <artifactId>dropbox-core-sdk</artifactId>
-           <version>5.4.4</version>
         </dependency>
                                                              
         <!-- JavaMail API for Sending Emails -->
