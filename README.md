@@ -1,14 +1,10 @@
 gbb<h1 style="font-size:12px;"> Rang - Security for Everyone </h1>
 <a href="https://github.com/simon-kowerski/RangSecurity/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/simon-kowerski/RangSecurity" /></a>
-<a href="https://img.shields.io/github/commit-activity/w/simon-kowerski/RangSecurity">
-        <img src="https://img.shields.io/github/commit-activity/w/simon-kowerski/RangSecurity"></a>
 <a href="https://img.shields.io/github/issues/simon-kowerski/RangSecurity">
         <img src="https://img.shields.io/github/issues/simon-kowerski/RangSecurity"></a>
 <a href="https://destroybigcorporate.wixsite.com/rangrangrang">
         <img src="https://img.shields.io/website?url=https%3A%2F%2Fdestroybigcorporate.wixsite.com%2FRangRangRang"></a> 
- <a href="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total">
-        <img src="https://img.shields.io/github/downloads/simon-kowerski/RangSecurity/latest/total"></a>
  <a href="https://www.paypal.com/donate/?business=7565XAPM5MC9U&no_recurring=0&item_name=All+donations+help+to+fund+RangSecurity+and+are+used+to+purchase+additional+cameras+to+help+start+the+comapny.+&currency_code=USD">
  <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" /></a>
  <a href="https://github.com/pairOfPants">
