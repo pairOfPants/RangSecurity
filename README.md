@@ -14,7 +14,7 @@ gbb<h1 style="font-size:12px;"> Rang - Security for Everyone </h1>
  <a href="https://github.com/pairOfPants">
         <img src="https://img.shields.io/github/followers/pairOfPants?style=social"></a>
  <br><i>Note: This project is unfinished. It was originally created by four high school students at a local hackathon, and further development is now being implemented.</i> <br>
-Estimated Completion Date: <b>01-01-2024</b>
+Estimated Completion Date: <b>TBD</b>
 <h2 style="font-size:30px;"> Project Description </h2>
 Rang aims to take something that is overpriced and exploited, and make it accessible to everyone. Here at Rang, our mission is to help make information available and accessible to everyone, while doing so at an affordable price. We draw our inspirations from Ring Doorbells, and with our app, you can have equivalent power for a fraction of the cost.
 <br> <br>
